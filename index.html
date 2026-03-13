@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Gulam Mostafa | Master Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://res.cloudinary.com/dqidbgrpz/image/upload/v1773421450/BeautyPlus_20260218001649730_save_d1qlnv.jpg');
+            background-size: cover; background-position: center; background-attachment: fixed;
+        }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gallery-img { width: 100%; height: 400px; object-fit: cover; border-radius: 24px; transition: 0.5s; }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-slate-300 overflow-x-hidden">
+
+    <nav class="fixed w-full top-0 z-[100] bg-[#0f172a]/80 backdrop-blur-md py-4 px-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-black text-white">MOSTAFA<span class="text-indigo-500">.</span></div>
+            <div class="hidden lg:flex space-x-8 font-bold text-[10px] uppercase tracking-widest">
+                <a href="#home" class="hover:text-indigo-400 transition">Home</a>
+                <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
+                <a href="#personal" class="hover:text-indigo-400 transition">Bio-Data</a>
+                <a href="#gallery" class="hover:text-indigo-400 transition">Gallery</a>
+                <a href="details.html" class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition">Full Bio Page</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-bg min-h-screen flex items-center pt-20 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h1 class="text-6xl md:text-8xl font-black text-white leading-none mb-6">Md. Gulam <br><span class="text-indigo-500">Mostafa.</span></h1>
+                <p class="text-lg md:text-xl text-slate-400 mb-10 leading-relaxed">Mechanical Engineer | Govt. Teacher | MERN Stack Developer</p>
+                <div class="flex gap-4">
+                    <a href="details.html" class="bg-indigo-600 text-white px-8 py-4 rounded-2xl font-black hover:scale-105 transition">Full Biography</a>
+                    <a href="#gallery" class="glass text-white px-8 py-4 rounded-2xl font-black hover:bg-white/10 transition">Moments</a>
+                </div>
+            </div>
+            <div class="flex justify-center" data-aos="zoom-in">
+                <div class="w-72 h-72 md:w-96 md:h-96 rounded-[50px] overflow-hidden border-8 border-white/10 shadow-2xl">
+                    <img src="https://res.cloudinary.com/dqidbgrpz/image/upload/v1773421131/profile_pic_twqxtx.png" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="skills" class="py-32 px-6 bg-[#0a0f1d]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black text-white mb-16 text-center" data-aos="fade-up">Technical Arsenal</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass p-10 rounded-[40px] hover:border-indigo-500 transition" data-aos="fade-up">
+                    <i class="fab fa-react text-4xl text-blue-400 mb-6"></i>
+                    <h3 class="font-bold text-white mb-2">React JS</h3>
+                    <p class="text-xs text-slate-500">Modern Web Applications</p>
+                </div>
+                <div class="glass p-10 rounded-[40px] hover:border-green-500 transition" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-database text-4xl text-green-500 mb-6"></i>
+                    <h3 class="font-bold text-white mb-2">MongoDB</h3>
+                    <p class="text-xs text-slate-500">NoSQL Database Management</p>
+                </div>
+                <div class="glass p-10 rounded-[40px] hover:border-yellow-500 transition" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fab fa-js text-4xl text-yellow-500 mb-6"></i>
+                    <h3 class="font-bold text-white mb-2">JavaScript</h3>
+                    <p class="text-xs text-slate-500">Dynamic Functionality</p>
+                </div>
+                <div class="glass p-10 rounded-[40px] hover:border-emerald-500 transition" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fab fa-android text-4xl text-emerald-500 mb-6"></i>
+                    <h3 class="font-bold text-white mb-2">Android Studio</h3>
+                    <p class="text-xs text-slate-500">Java & Native Apps</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="projects" class="py-32 px-6 bg-[#0a0f1d]">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-black text-white mb-16 text-center" data-aos="fade-up">Innovative Projects</h2>
+        
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass p-8 rounded-[40px] hover:bg-emerald-600/10 transition" data-aos="fade-up">
+                <div class="text-emerald-500 text-3xl mb-4"><i class="fas fa-seedling"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">Smart Plant Watering System</h3>
+                <p class="text-sm text-slate-400">Designed an automated system that delivers water directly to the plant roots, ensuring optimal growth and water conservation.</p>
+            </div>
+
+            <div class="glass p-8 rounded-[40px] hover:bg-orange-600/10 transition" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-orange-500 text-3xl mb-4"><i class="fas fa-home"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">Smart Home Automation</h3>
+                <p class="text-sm text-slate-400">Developed a smart system to control home appliances (Lights, Fans) remotely, focusing on energy efficiency and convenience.</p>
+            </div>
+
+            <div class="glass p-8 rounded-[40px] hover:bg-blue-600/10 transition" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-blue-500 text-3xl mb-4"><i class="fas fa-tint"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">Automatic Water Pump Controller</h3>
+                <p class="text-sm text-slate-400">Engineered a sensor-based system that automatically switches the water pump ON/OFF based on water levels to prevent overflow and dry-run.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 text-center bg-white rounded-b-[60px] md:rounded-b-[100px]">
+    <h3 class="text-slate-900 font-black text-2xl mb-8 uppercase tracking-widest">Connect with me</h3>
+    <div class="flex justify-center gap-6">
+        <a href="https://www.facebook.com/neamul9" target="_blank" class="w-16 h-16 bg-[#1877F2] text-white rounded-2xl flex items-center justify-center text-3xl hover:scale-110 transition shadow-xl">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="w-16 h-16 bg-[#0077B5] text-white rounded-2xl flex items-center justify-center text-3xl hover:scale-110 transition shadow-xl">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+      <a href="https://wa.me/8801812456207" target="_blank" class="flex items-center gap-3 bg-[#25D366] text-white px-6 py-3 rounded-2xl font-bold hover:scale-105 transition shadow-lg">
+    <i class="fab fa-whatsapp text-2xl"></i>
+    <span> Whatsapp
+    </span>
+</a>
+    </div>
+</section>
+
+    <section id="personal" class="py-32 px-6 bg-white text-slate-900 rounded-[60px] md:rounded-[100px]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-center text-4xl font-black mb-20" data-aos="fade-down">Personal Biography</h2>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="bg-slate-50 p-10 rounded-[50px] border border-slate-100 shadow-inner" data-aos="fade-right">
+                    <h3 class="text-2xl font-black mb-8 italic">Bio-Data Details</h3>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between border-b py-3"><span>Birth Date</span><span class="font-bold">05 May 1996</span></div>
+                        <div class="flex justify-between border-b py-3"><span>Blood Group</span><span class="text-red-600 font-black">A+</span></div>
+                        <div class="flex justify-between border-b py-3"><span>Height/Weight</span><span class="font-bold">5' 8" / 70 kg</span></div>
+                        <div class="flex justify-between py-3"><span>Address</span><span class="font-bold">Bahadurpur, Gazipur</span></div>
+                    </div>
+                </div>
+                <div class="bg-slate-900 p-10 rounded-[50px] text-white shadow-2xl" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-8 italic text-indigo-400">Family Background</h3>
+                    <div class="space-y-6">
+                        <div><p class="text-xs text-slate-500 font-black uppercase">Father</p><p class="font-bold">Md. Abu Bakkar Siddik (Retired Army)</p></div>
+                        <div><p class="text-xs text-slate-500 font-black uppercase">Mother</p><p class="font-bold">Nasima Akter (Homemaker)</p></div>
+                        <div><p class="text-xs text-slate-500 font-black uppercase">Brothers</p><p class="font-medium">Md. Nazmul Hoque & Md. Mehadi Hasan</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center text-4xl font-black text-white mb-20" data-aos="fade-up">Life Moments</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <img src="https://res.cloudinary.com/dqidbgrpz/image/upload/v1773421450/BeautyPlus_20260221110622361_save_ybyawf.jpg" class="gallery-img" data-aos="fade-up">
+                <img src="https://res.cloudinary.com/dqidbgrpz/image/upload/v1773421450/BeautyPlus_20260218001649730_save_d1qlnv.jpg" class="gallery-img" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://res.cloudinary.com/dqidbgrpz/image/upload/v1773421449/BeautyPlus_20260217235422966_save_cjszg6.jpg" class="gallery-img" data-aos="fade-up" data-aos-delay="200">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 py-10 text-center text-slate-500 text-[10px] font-bold uppercase tracking-[0.5em]">
+        Md. Gulam Mostafa © 2026
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>
