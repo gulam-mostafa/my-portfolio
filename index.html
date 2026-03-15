@@ -1,411 +1,502 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Md. Gulam Mostafa | Master Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      .hero-bg {
-        background-image:
-          linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)),
-          url("https://res.cloudinary.com/dqidbgrpz/image/upload/v1773421450/BeautyPlus_20260218001649730_save_d1qlnv.jpg");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-      }
-      .glass {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .gallery-img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 24px;
-        transition: 0.5s;
-      }
-    </style>
-  </head>
-  <body class="bg-[#0f172a] text-slate-300 overflow-x-hidden">
-    <nav
-      class="fixed w-full top-0 z-[100] bg-[#0f172a]/80 backdrop-blur-md py-4 px-6 border-b border-white/5"
-    >
-      <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <div class="text-2xl font-black text-white">
-          MOSTAFA<span class="text-indigo-500">.</span>
-        </div>
-        <div
-          class="hidden lg:flex space-x-8 font-bold text-[10px] uppercase tracking-widest"
-        >
-          <a href="#home" class="hover:text-indigo-400 transition">Home</a>
-          <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
-          <a href="#personal" class="hover:text-indigo-400 transition"
-            >Bio-Data</a
-          >
-          <a href="#gallery" class="hover:text-indigo-400 transition"
-            >Gallery</a
-          >
-          <a
-            href="details.html"
-            class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition"
-            >Full Bio Page</a
-          >
-        </div>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md. Gulam Mostafa — Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #080604;
+      --surface: #0f0c07;
+      --surface2: #161208;
+      --gold: #c9972a;
+      --gold2: #f0c040;
+      --gold3: #fde68a;
+      --text: #e8dcc8;
+      --muted: #7a6a4f;
+      --border: rgba(201,151,42,0.18);
+      --border2: rgba(201,151,42,0.08);
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; overflow-x: hidden; cursor: none; }
 
-    <header id="home" class="hero-bg min-h-screen flex items-center pt-20 px-6">
-      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-        <div data-aos="fade-right">
-          <h1
-            class="text-6xl md:text-8xl font-black text-white leading-none mb-6"
-          >
-            Md. Gulam <br /><span class="text-indigo-500">Mostafa.</span>
-          </h1>
-          <p class="text-lg md:text-xl text-slate-400 mb-10 leading-relaxed">
-            Mechanical Engineer | Govt. Teacher | MERN Stack Developer
-          </p>
-          <div class="flex gap-4">
-            <a
-              href="details.html"
-              class="bg-indigo-600 text-white px-8 py-4 rounded-2xl font-black hover:scale-105 transition"
-              >Full Biography</a
-            >
-            <a
-              href="#gallery"
-              class="glass text-white px-8 py-4 rounded-2xl font-black hover:bg-white/10 transition"
-              >Moments</a
-            >
-          </div>
-        </div>
-        <div class="flex justify-center" data-aos="zoom-in">
-          <div
-            class="w-72 h-72 md:w-96 md:h-96 rounded-[50px] overflow-hidden border-8 border-white/10 shadow-2xl"
-          >
-            <img
-              src="https://res.cloudinary.com/dqidbgrpz/image/upload/v1773421131/profile_pic_twqxtx.png"
-              class="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-      </div>
-    </header>
+    /* SCROLL PROGRESS */
+    #progress-bar { position:fixed; top:0; left:0; height:3px; width:0%; background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold3)); z-index:9999; box-shadow:0 0 10px var(--gold2); }
 
-    <section id="skills" class="py-32 px-6 bg-[#0a0f1d]">
-      <div class="max-w-7xl mx-auto">
-        <h2
-          class="text-4xl font-black text-white mb-16 text-center"
-          data-aos="fade-up"
-        >
-          Technical Arsenal
-        </h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div
-            class="glass p-10 rounded-[40px] hover:border-indigo-500 transition"
-            data-aos="fade-up"
-          >
-            <i class="fab fa-react text-4xl text-blue-400 mb-6"></i>
-            <h3 class="font-bold text-white mb-2">React JS</h3>
-            <p class="text-xs text-slate-500">Modern Web Applications</p>
-          </div>
-          <div
-            class="glass p-10 rounded-[40px] hover:border-green-500 transition"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <i class="fas fa-database text-4xl text-green-500 mb-6"></i>
-            <h3 class="font-bold text-white mb-2">MongoDB</h3>
-            <p class="text-xs text-slate-500">NoSQL Database Management</p>
-          </div>
-          <div
-            class="glass p-10 rounded-[40px] hover:border-yellow-500 transition"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <i class="fab fa-js text-4xl text-yellow-500 mb-6"></i>
-            <h3 class="font-bold text-white mb-2">JavaScript</h3>
-            <p class="text-xs text-slate-500">Dynamic Functionality</p>
-          </div>
-          <div
-            class="glass p-10 rounded-[40px] hover:border-emerald-500 transition"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <i class="fab fa-android text-4xl text-emerald-500 mb-6"></i>
-            <h3 class="font-bold text-white mb-2">Android Studio</h3>
-            <p class="text-xs text-slate-500">Java & Native Apps</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    /* CURSOR */
+    #cursor { position:fixed; width:12px; height:12px; background:var(--gold2); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:width .2s,height .2s,opacity .2s; box-shadow:0 0 12px var(--gold2),0 0 30px rgba(240,192,64,.4); }
+    #cursor-glow { position:fixed; width:300px; height:300px; border-radius:50%; background:radial-gradient(circle,rgba(201,151,42,.07) 0%,transparent 70%); pointer-events:none; z-index:9997; transform:translate(-50%,-50%); }
 
-    <section id="projects" class="py-32 px-6 bg-[#0a0f1d]">
-      <div class="max-w-7xl mx-auto">
-        <h2
-          class="text-4xl font-black text-white mb-16 text-center"
-          data-aos="fade-up"
-        >
-          Innovative Projects
-        </h2>
+    /* PARTICLES */
+    #particles { position:fixed; inset:0; z-index:0; pointer-events:none; }
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            class="glass p-8 rounded-[40px] hover:bg-emerald-600/10 transition"
-            data-aos="fade-up"
-          >
-            <div class="text-emerald-500 text-3xl mb-4">
-              <i class="fas fa-seedling"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2">
-              Smart Plant Watering System
-            </h3>
-            <p class="text-sm text-slate-400">
-              Designed an automated system that delivers water directly to the
-              plant roots, ensuring optimal growth and water conservation.
-            </p>
-          </div>
+    /* NAV */
+    nav { position:fixed; top:3px; width:100%; z-index:200; padding:1.1rem 2.5rem; display:flex; align-items:center; justify-content:space-between; background:rgba(8,6,4,.85); backdrop-filter:blur(24px); border-bottom:1px solid var(--border); }
+    .nav-logo { font-weight:800; font-size:1.2rem; color:white; letter-spacing:-.02em; }
+    .nav-logo span { color:var(--gold2); }
+    nav ul { list-style:none; display:flex; gap:2.5rem; font-size:.68rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; }
+    nav ul a { color:var(--muted); text-decoration:none; transition:color .2s; }
+    nav ul a:hover { color:var(--gold2); }
+    .nav-cta { background:linear-gradient(135deg,var(--gold),var(--gold2)); color:#080604 !important; padding:.45rem 1.2rem; border-radius:100px; font-weight:700 !important; transition:opacity .2s,transform .2s !important; }
+    .nav-cta:hover { opacity:.85; transform:scale(1.05); }
 
-          <div
-            class="glass p-8 rounded-[40px] hover:bg-orange-600/10 transition"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="text-orange-500 text-3xl mb-4">
-              <i class="fas fa-home"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2">
-              Smart Home Automation
-            </h3>
-            <p class="text-sm text-slate-400">
-              Developed a smart system to control home appliances (Lights, Fans)
-              remotely, focusing on energy efficiency and convenience.
-            </p>
-          </div>
+    /* HERO */
+    #home { min-height:100vh; display:flex; align-items:center; padding:7rem 2.5rem 4rem; position:relative; overflow:hidden; z-index:1; }
+    .hero-line { position:absolute; width:1px; background:linear-gradient(to bottom,transparent,var(--gold),transparent); opacity:.25; }
+    .hero-line:nth-child(1) { left:15%; height:60%; top:20%; }
+    .hero-line:nth-child(2) { right:20%; height:40%; top:30%; }
+    .hero-inner { max-width:1200px; margin:0 auto; width:100%; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; position:relative; z-index:1; }
 
-          <div
-            class="glass p-8 rounded-[40px] hover:bg-blue-600/10 transition"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="text-blue-500 text-3xl mb-4">
-              <i class="fas fa-tint"></i>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2">
-              Automatic Water Pump Controller
-            </h3>
-            <p class="text-sm text-slate-400">
-              Engineered a sensor-based system that automatically switches the
-              water pump ON/OFF based on water levels to prevent overflow and
-              dry-run.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    .hero-eyebrow { display:inline-flex; align-items:center; gap:.6rem; font-size:.7rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--gold2); margin-bottom:1.5rem; opacity:0; animation:fadeUp .8s .2s forwards; }
+    .hero-eyebrow::before,.hero-eyebrow::after { content:''; width:30px; height:1px; background:var(--gold); }
+    .live-dot { width:7px; height:7px; border-radius:50%; background:#4ade80; box-shadow:0 0 8px #4ade80; animation:livePulse 2s ease-in-out infinite; }
+    @keyframes livePulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.75)} }
 
-    <section id="hobbies" class="py-24 px-6 bg-white">
-      <div class="max-w-7xl mx-auto">
-        <h2
-          class="text-4xl font-black text-slate-900 mb-16 text-center"
-          data-aos="fade-up"
-        >
-          My Hobbies & Interests
-        </h2>
+    h1 { font-size:clamp(2.8rem,5.5vw,5rem); font-weight:800; line-height:1.0; letter-spacing:-.03em; color:white; margin-bottom:.5rem; opacity:0; animation:fadeUp .8s .4s forwards; }
+    h1 .gold { color:var(--gold2); }
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div
-            class="p-8 rounded-[40px] bg-slate-50 hover:bg-indigo-600 hover:text-white transition-all duration-300 text-center group"
-            data-aos="zoom-in"
-          >
-            <div class="text-4xl mb-4 text-indigo-600 group-hover:text-white">
-              <i class="fas fa-code"></i>
-            </div>
-            <h3 class="font-bold">Coding</h3>
-          </div>
+    .typing-wrap { font-size:1.1rem; font-weight:300; color:var(--muted); margin-bottom:2rem; min-height:1.8em; opacity:0; animation:fadeUp .8s .6s forwards; }
+    #typed-text { color:var(--gold3); font-weight:500; }
+    #cursor-blink { display:inline-block; width:2px; height:1.1em; background:var(--gold2); margin-left:2px; vertical-align:text-bottom; animation:blink .8s step-end infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
-          <div
-            class="p-8 rounded-[40px] bg-slate-50 hover:bg-emerald-600 hover:text-white transition-all duration-300 text-center group"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-          >
-            <div class="text-4xl mb-4 text-emerald-600 group-hover:text-white">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <h3 class="font-bold">Innovation</h3>
-          </div>
+    .hero-btns { display:flex; gap:1rem; flex-wrap:wrap; opacity:0; animation:fadeUp .8s .8s forwards; }
+    .btn-gold { display:inline-flex; align-items:center; gap:.5rem; background:linear-gradient(135deg,var(--gold),var(--gold2)); color:#080604; padding:.9rem 2rem; border-radius:10px; font-weight:700; font-size:.9rem; text-decoration:none; transition:transform .2s,box-shadow .2s; }
+    .btn-gold:hover { transform:translateY(-3px); box-shadow:0 12px 35px rgba(201,151,42,.4); }
+    .btn-ghost { display:inline-flex; align-items:center; gap:.5rem; background:transparent; color:var(--text); padding:.9rem 2rem; border-radius:10px; font-weight:500; font-size:.9rem; text-decoration:none; border:1px solid var(--border); transition:transform .2s,border-color .2s,color .2s; }
+    .btn-ghost:hover { transform:translateY(-3px); border-color:var(--gold); color:var(--gold2); }
 
-          <div
-            class="p-8 rounded-[40px] bg-slate-50 hover:bg-orange-600 hover:text-white transition-all duration-300 text-center group"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
-            <div class="text-4xl mb-4 text-orange-600 group-hover:text-white">
-              <i class="fas fa-search"></i>
-            </div>
-            <h3 class="font-bold">Exploring</h3>
-          </div>
+    /* HERO IMAGE */
+    .hero-img-wrap { display:flex; justify-content:flex-end; align-items:center; opacity:0; animation:fadeUp .8s .5s forwards; }
+    .hero-img-frame { position:relative; width:340px; height:400px; }
+    .hero-img-frame::before { content:''; position:absolute; inset:-2px; border-radius:28px; background:linear-gradient(135deg,var(--gold),transparent 50%,var(--gold2)); z-index:0; }
+    .hero-img-frame img { position:relative; z-index:1; width:100%; height:100%; object-fit:cover; border-radius:26px; display:block; }
+    .hero-badge { position:absolute; bottom:-18px; left:-28px; background:var(--surface2); border:1px solid var(--border); border-radius:14px; padding:.8rem 1.1rem; display:flex; align-items:center; gap:.75rem; z-index:2; backdrop-filter:blur(10px); }
+    .hero-badge-icon { width:38px; height:38px; border-radius:10px; background:rgba(201,151,42,.15); display:flex; align-items:center; justify-content:center; color:var(--gold2); font-size:1rem; }
+    .hero-badge-text { font-size:.72rem; }
+    .hero-badge-text strong { display:block; color:white; font-weight:600; }
+    .hero-badge-text span { color:var(--muted); }
 
-          <div
-            class="p-8 rounded-[40px] bg-slate-50 hover:bg-blue-600 hover:text-white transition-all duration-300 text-center group"
-            data-aos="zoom-in"
-            data-aos-delay="300"
-          >
-            <div class="text-4xl mb-4 text-blue-600 group-hover:text-white">
-              <i class="fas fa-plane-departure"></i>
-            </div>
-            <h3 class="font-bold">Traveling</h3>
-          </div>
+    /* DIVIDER */
+    .gold-divider { width:100%; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); opacity:.25; position:relative; z-index:1; }
+
+    /* SECTION */
+    section { position:relative; z-index:1; }
+    .section-inner { max-width:1200px; margin:0 auto; padding:6rem 2.5rem; }
+    .section-label { font-size:.68rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--gold2); margin-bottom:.6rem; display:flex; align-items:center; gap:.6rem; }
+    .section-label::before { content:''; width:28px; height:1px; background:var(--gold); }
+    .section-title { font-size:clamp(1.8rem,3.5vw,2.75rem); font-weight:800; letter-spacing:-.03em; color:white; margin-bottom:3rem; }
+
+    /* PROFESSION */
+    #profession { background:var(--surface); }
+    .profession-card { background:var(--bg); border:1px solid var(--border); border-radius:24px; padding:3rem; display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; position:relative; overflow:hidden; }
+    .profession-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--gold),var(--gold2),transparent); }
+    .profession-badge { display:inline-block; background:rgba(201,151,42,.1); border:1px solid rgba(201,151,42,.3); color:var(--gold2); font-size:.68rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; padding:.3rem .85rem; border-radius:100px; margin-bottom:1rem; }
+    .profession-title { font-size:1.9rem; font-weight:800; color:white; margin-bottom:.4rem; }
+    .profession-school { font-size:.95rem; color:var(--gold2); margin-bottom:1.25rem; font-weight:500; }
+    .profession-meta { display:flex; align-items:center; gap:.5rem; font-size:.82rem; color:var(--muted); }
+    .profession-meta i { color:var(--gold); }
+    .profession-activity { background:rgba(201,151,42,.06); border:1px solid rgba(201,151,42,.18); border-radius:14px; padding:1.4rem; margin-top:1.5rem; }
+    .activity-header { display:flex; align-items:center; gap:.5rem; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--gold2); margin-bottom:.6rem; }
+    .activity-dot { width:8px; height:8px; border-radius:50%; background:#4ade80; box-shadow:0 0 8px #4ade80; animation:livePulse 2s ease-in-out infinite; }
+    .profession-quote { font-size:.9rem; color:var(--muted); line-height:1.8; font-style:italic; border-left:3px solid var(--gold); padding-left:1.25rem; }
+
+    /* SKILLS */
+    #skills { background:var(--bg); }
+    .skills-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.25rem; }
+    .skill-card { background:var(--surface); border:1px solid var(--border2); border-radius:18px; padding:1.75rem; transition:transform .3s,border-color .3s,box-shadow .3s; cursor:default; position:relative; overflow:hidden; }
+    .skill-card::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--gold2),transparent); opacity:0; transition:opacity .3s; }
+    .skill-card:hover { transform:translateY(-5px); border-color:var(--border); box-shadow:0 20px 50px rgba(0,0,0,.5); }
+    .skill-card:hover::before { opacity:1; }
+    .skill-icon { font-size:1.9rem; margin-bottom:1rem; display:block; }
+    .skill-card h3 { font-size:1rem; font-weight:700; color:white; margin-bottom:.3rem; }
+    .skill-card p { font-size:.78rem; color:var(--muted); }
+    .skill-bar-wrap { margin-top:1.1rem; background:rgba(255,255,255,.04); border-radius:100px; height:3px; overflow:hidden; }
+    .skill-bar { height:100%; border-radius:100px; background:linear-gradient(90deg,var(--gold),var(--gold2)); box-shadow:0 0 8px rgba(240,192,64,.4); width:0; transition:width 1.4s ease; }
+
+    /* PROJECTS */
+    #projects { background:var(--surface); }
+    .projects-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.25rem; }
+    .project-card { background:var(--bg); border:1px solid var(--border2); border-radius:18px; padding:2rem; transition:transform .3s,border-color .3s; position:relative; overflow:hidden; }
+    .project-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--gold2),transparent); opacity:0; transition:opacity .3s; }
+    .project-card:hover { transform:translateY(-4px); border-color:var(--border); }
+    .project-card:hover::before { opacity:1; }
+    .project-icon { width:50px; height:50px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.35rem; margin-bottom:1.1rem; }
+    .project-card h3 { font-size:1rem; font-weight:700; color:white; margin-bottom:.5rem; }
+    .project-card p { font-size:.82rem; color:var(--muted); line-height:1.7; }
+
+    /* HOBBIES */
+    #hobbies { background:var(--bg); }
+    .hobbies-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+    .hobby-card {
+      background:var(--surface); border:1px solid var(--border2);
+      border-radius:20px; padding:2rem 1rem 1.5rem;
+      text-align:center; cursor:default; position:relative; overflow:hidden;
+      transition:transform .35s,border-color .35s,box-shadow .35s;
+    }
+    .hobby-card::before {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(circle at 50% 0%,rgba(201,151,42,.12) 0%,transparent 70%);
+      opacity:0; transition:opacity .35s;
+    }
+    .hobby-card::after {
+      content:''; position:absolute; top:0; left:0; right:0; height:2px;
+      background:linear-gradient(90deg,transparent,var(--gold2),transparent);
+      opacity:0; transition:opacity .35s;
+    }
+    .hobby-card:hover { transform:translateY(-7px); border-color:rgba(201,151,42,.35); box-shadow:0 20px 50px rgba(0,0,0,.5),0 0 30px rgba(201,151,42,.08); }
+    .hobby-card:hover::before,.hobby-card:hover::after { opacity:1; }
+    .hobby-icon-wrap {
+      width:58px; height:58px; border-radius:16px;
+      background:rgba(201,151,42,.08); border:1px solid rgba(201,151,42,.15);
+      display:flex; align-items:center; justify-content:center;
+      margin:0 auto 1rem; position:relative; z-index:1;
+      transition:transform .35s,background .35s,box-shadow .35s;
+    }
+    .hobby-card:hover .hobby-icon-wrap { transform:scale(1.1) rotate(-5deg); background:rgba(201,151,42,.16); box-shadow:0 8px 25px rgba(201,151,42,.2); }
+    .hobby-icon { font-size:1.5rem; color:var(--gold2); display:block; }
+    .hobby-name { font-size:.83rem; font-weight:600; color:var(--text); display:block; position:relative; z-index:1; transition:color .3s; }
+    .hobby-card:hover .hobby-name { color:var(--gold3); }
+    .hobby-desc { font-size:.7rem; color:var(--muted); display:block; margin-top:.3rem; position:relative; z-index:1; }
+
+    /* BIOGRAPHY */
+    #personal { background:var(--surface); }
+    .bio-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; }
+    .bio-card { background:var(--bg); border:1px solid var(--border2); border-radius:20px; padding:2.25rem; position:relative; overflow:hidden; }
+    .bio-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--gold),transparent); }
+    .bio-card-title { font-size:1rem; font-weight:700; color:white; margin-bottom:1.5rem; padding-bottom:.85rem; border-bottom:1px solid var(--border2); }
+    .bio-row { display:flex; justify-content:space-between; align-items:center; padding:.75rem 0; border-bottom:1px solid rgba(255,255,255,.03); font-size:.85rem; }
+    .bio-row:last-child { border-bottom:none; }
+    .bio-row .label { color:var(--muted); }
+    .bio-row .value { color:white; font-weight:500; }
+    .bio-row .value.red { color:#f87171; font-weight:700; }
+    .family-item { margin-bottom:1.1rem; }
+    .family-role { font-size:.63rem; font-weight:700; text-transform:uppercase; letter-spacing:.15em; color:var(--muted); margin-bottom:.2rem; }
+    .family-name { font-size:.88rem; font-weight:500; color:white; }
+    .family-sub { font-size:.77rem; color:var(--muted); }
+
+    /* GALLERY */
+    #gallery { background:var(--bg); }
+    .gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    .gallery-item { border-radius:18px; overflow:hidden; aspect-ratio:4/5; position:relative; border:1px solid var(--border2); transition:border-color .3s; }
+    .gallery-item:hover { border-color:var(--border); }
+    .gallery-item img { width:100%; height:100%; object-fit:cover; transition:transform .5s; }
+    .gallery-item:hover img { transform:scale(1.06); }
+    .gallery-item::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(8,6,4,.55) 0%,transparent 55%); pointer-events:none; }
+
+    /* CONNECT */
+    #connect { background:var(--surface); }
+    .connect-inner { text-align:center; max-width:580px; margin:0 auto; padding:6rem 2rem; }
+    .connect-inner p { font-size:.95rem; color:var(--muted); margin-bottom:2.5rem; line-height:1.8; }
+    .social-links { display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; }
+    .social-link { display:inline-flex; align-items:center; gap:.55rem; padding:.7rem 1.4rem; border-radius:10px; font-size:.88rem; font-weight:600; text-decoration:none; transition:transform .2s,box-shadow .2s; }
+    .social-link:hover { transform:translateY(-3px); }
+    .social-link.fb { background:#1877F2; color:white; } .social-link.fb:hover { box-shadow:0 10px 28px rgba(24,119,242,.35); }
+    .social-link.li { background:#0077B5; color:white; } .social-link.li:hover { box-shadow:0 10px 28px rgba(0,119,181,.35); }
+    .social-link.wa { background:#25D366; color:white; } .social-link.wa:hover { box-shadow:0 10px 28px rgba(37,211,102,.35); }
+
+    /* FOOTER */
+    footer { background:var(--bg); border-top:1px solid var(--border2); padding:2rem; text-align:center; font-size:.72rem; color:var(--muted); letter-spacing:.12em; text-transform:uppercase; }
+    footer span { color:var(--gold2); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
+    .fade-in { opacity:0; transform:translateY(22px); transition:opacity .7s ease,transform .7s ease; }
+    .fade-in.visible { opacity:1; transform:none; }
+    .d1{transition-delay:.1s} .d2{transition-delay:.2s} .d3{transition-delay:.3s}
+
+    @media (max-width:768px) {
+      nav ul { display:none; }
+      .hero-inner { grid-template-columns:1fr; text-align:center; }
+      .hero-img-wrap { justify-content:center; margin-top:2rem; }
+      .hero-img-frame { width:270px; height:310px; }
+      .hero-btns { justify-content:center; }
+      .profession-card,.bio-grid { grid-template-columns:1fr; }
+      .gallery-grid { grid-template-columns:1fr; }
+      .hobbies-grid { grid-template-columns:repeat(2,1fr); }
+      body { cursor:auto; }
+      #cursor,#cursor-glow { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+  <div id="cursor"></div>
+  <div id="cursor-glow"></div>
+  <canvas id="particles"></canvas>
+
+  <nav>
+    <div class="nav-logo">MOSTAFA<span>.</span></div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#personal">Bio-Data</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="details.html" class="nav-cta">Full Bio</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
+    <div class="hero-line"></div>
+    <div class="hero-line"></div>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow"><span class="live-dot"></span>Open to Opportunities</div>
+        <h1>Md. Gulam<br><span class="gold">Mostafa.</span></h1>
+        <p class="typing-wrap"><span id="typed-text"></span><span id="cursor-blink"></span></p>
+        <div class="hero-btns">
+          <a href="details.html" class="btn-gold"><i class="fas fa-user"></i> Full Biography</a>
+          <a href="#gallery" class="btn-ghost"><i class="fas fa-images"></i> Life Moments</a>
         </div>
       </div>
-    </section>
-
-    <section
-      class="py-20 text-center bg-white rounded-b-[60px] md:rounded-b-[100px]"
-    >
-      <h3
-        class="text-slate-900 font-black text-2xl mb-8 uppercase tracking-widest"
-      >
-        Connect with me
-      </h3>
-      <div class="flex justify-center gap-6">
-        <a
-          href="https://www.facebook.com/neamul9"
-          target="_blank"
-          class="w-16 h-16 bg-[#1877F2] text-white rounded-2xl flex items-center justify-center text-3xl hover:scale-110 transition shadow-xl"
-        >
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a
-          href="#"
-          class="w-16 h-16 bg-[#0077B5] text-white rounded-2xl flex items-center justify-center text-3xl hover:scale-110 transition shadow-xl"
-        >
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a
-          href="https://wa.me/8801812456207"
-          target="_blank"
-          class="flex items-center gap-3 bg-[#25D366] text-white px-6 py-3 rounded-2xl font-bold hover:scale-105 transition shadow-lg"
-        >
-          <i class="fab fa-whatsapp text-2xl"></i>
-          <span> Whatsapp </span>
-        </a>
-      </div>
-    </section>
-
-    <section
-      id="personal"
-      class="py-32 px-6 bg-white text-slate-900 rounded-[60px] md:rounded-[100px]"
-    >
-      <div class="max-w-6xl mx-auto">
-        <h2 class="text-center text-4xl font-black mb-20" data-aos="fade-down">
-          Personal Biography
-        </h2>
-        <div class="grid lg:grid-cols-2 gap-12">
-          <div
-            class="bg-slate-50 p-10 rounded-[50px] border border-slate-100 shadow-inner"
-            data-aos="fade-right"
-          >
-            <h3 class="text-2xl font-black mb-8 italic">Bio-Data Details</h3>
-            <div class="space-y-4 text-sm">
-              <div class="flex justify-between border-b py-3">
-                <span>Birth Date</span
-                ><span class="font-bold">05 May 1996</span>
-              </div>
-              <div class="flex justify-between border-b py-3">
-                <span>Blood Group</span
-                ><span class="text-red-600 font-black">A+</span>
-              </div>
-              <div class="flex justify-between border-b py-3">
-                <span>Height/Weight</span
-                ><span class="font-bold">5' 8" / 70 kg</span>
-              </div>
-              <div class="flex justify-between py-3">
-                <span>Address</span
-                ><span class="font-bold">Bahadurpur, Gazipur</span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="bg-slate-900 p-10 rounded-[50px] text-white shadow-2xl"
-            data-aos="fade-left"
-          >
-            <h3 class="text-2xl font-bold mb-8 italic text-indigo-400">
-              Family Background
-            </h3>
-            <div class="space-y-6">
-              <div>
-                <p class="text-xs text-slate-500 font-black uppercase">
-                  Father
-                </p>
-                <p class="font-bold">Md. Abu Bakkar Siddik (Retired Army)</p>
-              </div>
-              <div>
-                <p class="text-xs text-slate-500 font-black uppercase">
-                  Mother
-                </p>
-                <p class="font-bold">Nasima Akter (Homemaker)</p>
-              </div>
-              <div>
-                <p class="text-xs text-slate-500 font-black uppercase">
-                  Brothers
-                </p>
-                <p class="font-medium">Md. Nazmul Hoque & Md. Mehadi Hasan</p>
-              </div>
+      <div class="hero-img-wrap">
+        <div class="hero-img-frame">
+          <img src="https://res.cloudinary.com/dqidbgrpz/image/upload/v1773421131/profile_pic_twqxtx.png" alt="Md. Gulam Mostafa"/>
+          <div class="hero-badge">
+            <div class="hero-badge-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div class="hero-badge-text">
+              <strong>Govt. Primary Teacher</strong>
+              <span>Pirujali Alimpara School</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </header>
 
-    <section id="gallery" class="py-32 px-6">
-      <div class="max-w-7xl mx-auto">
-        <h2
-          class="text-center text-4xl font-black text-white mb-20"
-          data-aos="fade-up"
-        >
-          Life Moments
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <img
-            src="https://res.cloudinary.com/dqidbgrpz/image/upload/v1773421450/BeautyPlus_20260221110622361_save_ybyawf.jpg"
-            class="gallery-img"
-            data-aos="fade-up"
-          />
-          <img
-            src="https://res.cloudinary.com/dqidbgrpz/image/upload/v1773421450/BeautyPlus_20260218001649730_save_d1qlnv.jpg"
-            class="gallery-img"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          />
-          <img
-            src="https://res.cloudinary.com/dqidbgrpz/image/upload/v1773421449/BeautyPlus_20260217235422966_save_cjszg6.jpg"
-            class="gallery-img"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          />
+  <div class="gold-divider"></div>
+
+  <section id="profession">
+    <div class="section-inner">
+      <div class="section-label">Official Role</div>
+      <h2 class="section-title">Current Position</h2>
+      <div class="profession-card fade-in">
+        <div>
+          <span class="profession-badge">Official Profile</span>
+          <div class="profession-title">Assistant Teacher</div>
+          <div class="profession-school">Pirujali Alimpara Govt. Primary School</div>
+          <div class="profession-meta"><i class="fas fa-map-marker-alt"></i> Gazipur Sadar, Gazipur · Primary Education Division</div>
+          <div class="profession-activity">
+            <div class="activity-header"><span class="activity-dot"></span> Current Activity</div>
+            <p style="font-size:.85rem;color:var(--text);line-height:1.7">Currently undergoing <strong>Basic Training for Primary Teachers (BTPT)</strong> at <strong>Joydebpur PTI</strong> to enhance pedagogical skills and modern teaching methods.</p>
+          </div>
+        </div>
+        <div>
+          <p class="profession-quote">"Dedicated to shaping the future of students through quality education and innovative learning approaches that inspire the next generation."</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer
-      class="bg-slate-950 py-10 text-center text-slate-500 text-[10px] font-bold uppercase tracking-[0.5em]"
-    >
-      Md. Gulam Mostafa © 2026
-    </footer>
+  <section id="skills">
+    <div class="section-inner">
+      <div class="section-label">Expertise</div>
+      <h2 class="section-title">Technical Arsenal</h2>
+      <div class="skills-grid">
+        <div class="skill-card fade-in" data-bar="80"><span class="skill-icon" style="color:#60a5fa"><i class="fab fa-react"></i></span><h3>React JS</h3><p>Modern Web Applications</p><div class="skill-bar-wrap"><div class="skill-bar"></div></div></div>
+        <div class="skill-card fade-in d1" data-bar="70"><span class="skill-icon" style="color:#4ade80"><i class="fas fa-database"></i></span><h3>MongoDB</h3><p>NoSQL Database Management</p><div class="skill-bar-wrap"><div class="skill-bar"></div></div></div>
+        <div class="skill-card fade-in d2" data-bar="85"><span class="skill-icon" style="color:#fbbf24"><i class="fab fa-js"></i></span><h3>JavaScript</h3><p>Dynamic Functionality</p><div class="skill-bar-wrap"><div class="skill-bar"></div></div></div>
+        <div class="skill-card fade-in d3" data-bar="60"><span class="skill-icon" style="color:#34d399"><i class="fab fa-android"></i></span><h3>Android Studio</h3><p>Java & Native Apps</p><div class="skill-bar-wrap"><div class="skill-bar"></div></div></div>
+        <div class="skill-card fade-in" data-bar="72"><span class="skill-icon" style="color:#f472b6"><i class="fab fa-node-js"></i></span><h3>Node.js</h3><p>Backend API Development</p><div class="skill-bar-wrap"><div class="skill-bar"></div></div></div>
+        <div class="skill-card fade-in d1" data-bar="90"><span class="skill-icon" style="color:#fb923c"><i class="fab fa-html5"></i></span><h3>HTML & CSS</h3><p>Web Structure & Styling</p><div class="skill-bar-wrap"><div class="skill-bar"></div></div></div>
+        <div class="skill-card fade-in d2" data-bar="88"><span class="skill-icon" style="color:#a78bfa"><i class="fas fa-drafting-compass"></i></span><h3>Mechanical Eng.</h3><p>Design & Manufacturing</p><div class="skill-bar-wrap"><div class="skill-bar"></div></div></div>
+        <div class="skill-card fade-in d3" data-bar="65"><span class="skill-icon" style="color:#38bdf8"><i class="fas fa-microchip"></i></span><h3>IoT & Automation</h3><p>Smart Systems</p><div class="skill-bar-wrap"><div class="skill-bar"></div></div></div>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 1000, once: true });
-    </script>
-  </body>
+  <section id="projects" style="background:var(--surface)">
+    <div class="section-inner">
+      <div class="section-label">Work</div>
+      <h2 class="section-title">Innovative Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card fade-in">
+          <div class="project-icon" style="background:rgba(74,222,128,.1);color:#4ade80"><i class="fas fa-seedling"></i></div>
+          <h3>Smart Plant Watering System</h3>
+          <p>Automated system delivering water to plant roots, ensuring optimal growth and water conservation through sensor-based control.</p>
+        </div>
+        <div class="project-card fade-in d1">
+          <div class="project-icon" style="background:rgba(251,146,60,.1);color:#fb923c"><i class="fas fa-home"></i></div>
+          <h3>Smart Home Automation</h3>
+          <p>Remote control of home appliances focusing on energy efficiency and convenience with real-time monitoring capability.</p>
+        </div>
+        <div class="project-card fade-in d2">
+          <div class="project-icon" style="background:rgba(96,165,250,.1);color:#60a5fa"><i class="fas fa-tint"></i></div>
+          <h3>Auto Water Pump Controller</h3>
+          <p>Sensor-based system switching water pump ON/OFF based on water levels to prevent overflow and dry-run damage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hobbies">
+    <div class="section-inner">
+      <div class="section-label">Personal</div>
+      <h2 class="section-title">Hobbies & Interests</h2>
+      <div class="hobbies-grid">
+        <div class="hobby-card fade-in">
+          <div class="hobby-icon-wrap"><span class="hobby-icon"><i class="fas fa-code"></i></span></div>
+          <span class="hobby-name">Coding</span>
+          <span class="hobby-desc">Web & App Dev</span>
+        </div>
+        <div class="hobby-card fade-in d1">
+          <div class="hobby-icon-wrap"><span class="hobby-icon"><i class="fas fa-lightbulb"></i></span></div>
+          <span class="hobby-name">Innovation</span>
+          <span class="hobby-desc">Creative Solutions</span>
+        </div>
+        <div class="hobby-card fade-in d2">
+          <div class="hobby-icon-wrap"><span class="hobby-icon"><i class="fas fa-search"></i></span></div>
+          <span class="hobby-name">Exploring</span>
+          <span class="hobby-desc">New Technologies</span>
+        </div>
+        <div class="hobby-card fade-in d3">
+          <div class="hobby-icon-wrap"><span class="hobby-icon"><i class="fas fa-plane-departure"></i></span></div>
+          <span class="hobby-name">Traveling</span>
+          <span class="hobby-desc">New Destinations</span>
+        </div>
+        <div class="hobby-card fade-in">
+          <div class="hobby-icon-wrap"><span class="hobby-icon"><i class="fas fa-book-open"></i></span></div>
+          <span class="hobby-name">Reading</span>
+          <span class="hobby-desc">Books & Articles</span>
+        </div>
+        <div class="hobby-card fade-in d1">
+          <div class="hobby-icon-wrap"><span class="hobby-icon"><i class="fas fa-camera"></i></span></div>
+          <span class="hobby-name">Photography</span>
+          <span class="hobby-desc">Capturing Moments</span>
+        </div>
+        <div class="hobby-card fade-in d2">
+          <div class="hobby-icon-wrap"><span class="hobby-icon"><i class="fas fa-chalkboard-teacher"></i></span></div>
+          <span class="hobby-name">Teaching</span>
+          <span class="hobby-desc">Inspiring Minds</span>
+        </div>
+        <div class="hobby-card fade-in d3">
+          <div class="hobby-icon-wrap"><span class="hobby-icon"><i class="fas fa-leaf"></i></span></div>
+          <span class="hobby-name">Gardening</span>
+          <span class="hobby-desc">Growing Nature</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="personal">
+    <div class="section-inner">
+      <div class="section-label">About</div>
+      <h2 class="section-title">Personal Biography</h2>
+      <div class="bio-grid">
+        <div class="bio-card fade-in">
+          <div class="bio-card-title"><i class="fas fa-id-card" style="color:var(--gold2);margin-right:.5rem"></i>Bio-Data Details</div>
+          <div class="bio-row"><span class="label">Birth Date</span><span class="value">05 May 1996</span></div>
+          <div class="bio-row"><span class="label">Blood Group</span><span class="value red">A+</span></div>
+          <div class="bio-row"><span class="label">Height</span><span class="value">5′ 8″</span></div>
+          <div class="bio-row"><span class="label">Weight</span><span class="value">70 kg</span></div>
+          <div class="bio-row"><span class="label">Address</span><span class="value">Bahadurpur, Gazipur</span></div>
+          <div class="bio-row"><span class="label">Nationality</span><span class="value">Bangladeshi</span></div>
+          <div class="bio-row"><span class="label">Religion</span><span class="value">Islam</span></div>
+        </div>
+        <div class="bio-card fade-in d1">
+          <div class="bio-card-title"><i class="fas fa-users" style="color:var(--gold2);margin-right:.5rem"></i>Family Background</div>
+          <div class="family-item"><div class="family-role">Father</div><div class="family-name">Md. Abu Bakkar Siddik</div><div class="family-sub">Retired Army</div></div>
+          <div class="family-item"><div class="family-role">Mother</div><div class="family-name">Nasima Akter</div><div class="family-sub">Homemaker</div></div>
+          <div class="family-item"><div class="family-role">Brothers</div><div class="family-name">Md. Nazmul Hoque</div><div class="family-name">Md. Mehadi Hasan</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" style="background:var(--surface)">
+    <div class="section-inner">
+      <div class="section-label">Moments</div>
+      <h2 class="section-title">Life Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in"><img src="https://res.cloudinary.com/dqidbgrpz/image/upload/v1773421450/BeautyPlus_20260221110622361_save_ybyawf.jpg" alt="Moment 1"/></div>
+        <div class="gallery-item fade-in d1"><img src="https://res.cloudinary.com/dqidbgrpz/image/upload/v1773421450/BeautyPlus_20260218001649730_save_d1qlnv.jpg" alt="Moment 2"/></div>
+        <div class="gallery-item fade-in d2"><img src="https://res.cloudinary.com/dqidbgrpz/image/upload/v1773421449/BeautyPlus_20260217235422966_save_cjszg6.jpg" alt="Moment 3"/></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="connect">
+    <div class="connect-inner">
+      <div class="section-label" style="justify-content:center">Contact</div>
+      <h2 class="section-title" style="text-align:center">Let's Connect</h2>
+      <p>Whether you want to collaborate, discuss ideas, or just say hello — I'm always open to a good conversation.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/neamul9" target="_blank" class="social-link fb"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#" class="social-link li"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        <a href="https://wa.me/8801812456207" target="_blank" class="social-link wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>Md. Gulam Mostafa <span>©</span> 2026 &nbsp;·&nbsp; Crafted with passion</footer>
+
+  <script>
+    // SCROLL PROGRESS
+    window.addEventListener('scroll', () => {
+      const p = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+      document.getElementById('progress-bar').style.width = p + '%';
+    });
+
+    // CURSOR
+    const cur = document.getElementById('cursor');
+    const glow = document.getElementById('cursor-glow');
+    let mx=0,my=0,gx=0,gy=0;
+    document.addEventListener('mousemove', e => {
+      mx=e.clientX; my=e.clientY;
+      cur.style.left=mx+'px'; cur.style.top=my+'px';
+    });
+    (function animGlow(){
+      gx+=(mx-gx)*.08; gy+=(my-gy)*.08;
+      glow.style.left=gx+'px'; glow.style.top=gy+'px';
+      requestAnimationFrame(animGlow);
+    })();
+    document.querySelectorAll('a,button,.skill-card,.hobby-card,.project-card').forEach(el=>{
+      el.addEventListener('mouseenter',()=>{ cur.style.width='24px'; cur.style.height='24px'; cur.style.opacity='.6'; });
+      el.addEventListener('mouseleave',()=>{ cur.style.width='12px'; cur.style.height='12px'; cur.style.opacity='1'; });
+    });
+
+    // PARTICLES (gold stars)
+    const canvas=document.getElementById('particles');
+    const ctx=canvas.getContext('2d');
+    let W,H,stars=[];
+    function resize(){ W=canvas.width=window.innerWidth; H=canvas.height=window.innerHeight; }
+    resize(); window.addEventListener('resize',resize);
+    for(let i=0;i<130;i++) stars.push({x:Math.random()*3000,y:Math.random()*3000,r:Math.random()*1.3+.2,a:Math.random(),s:Math.random()*.004+.001,d:Math.random()>.5?1:-1});
+    (function drawStars(){
+      ctx.clearRect(0,0,W,H);
+      stars.forEach(s=>{
+        s.a+=s.s*s.d; if(s.a<=0||s.a>=1) s.d*=-1;
+        ctx.beginPath(); ctx.arc(s.x%W,s.y%H,s.r,0,Math.PI*2);
+        ctx.fillStyle=`rgba(201,151,42,${s.a*.7})`; ctx.fill();
+      });
+      requestAnimationFrame(drawStars);
+    })();
+
+    // TYPING EFFECT
+    const phrases=['Mechanical Engineer','Govt. Asst. Teacher','MERN Stack Developer','IoT Enthusiast'];
+    let pi=0,ci=0,del=false,wait=0;
+    const typed=document.getElementById('typed-text');
+    function type(){
+      if(wait>0){wait--;setTimeout(type,50);return;}
+      const phrase=phrases[pi];
+      if(!del){ typed.textContent=phrase.substring(0,++ci); if(ci===phrase.length){del=true;wait=40;} setTimeout(type,80); }
+      else { typed.textContent=phrase.substring(0,--ci); if(ci===0){del=false;pi=(pi+1)%phrases.length;wait=5;} setTimeout(type,40); }
+    }
+    type();
+
+    // FADE IN + SKILL BARS
+    const obs=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          const bar=e.target.querySelector('.skill-bar');
+          if(bar){ const pct=e.target.dataset.bar||'0'; setTimeout(()=>bar.style.width=pct+'%',200); }
+        }
+      });
+    },{threshold:.12});
+    document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+  </script>
+</body>
 </html>
